@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="https://astrangeman.bliesports.com.tr/WhatsApp_Image_2026-05-02_at_20.50.04__1_-removebg-preview.png">
     
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Orbitron:wght@400;500;700;900&family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <style>
@@ -50,7 +50,7 @@
         }
 
         .btn-download {
-            background: #0a2b18;
+            background: #0a2b18; /* Koyu yeşil */
             border: 1px solid #1e7a43;
             padding: 12px 28px;
             border-radius: 8px;
@@ -92,13 +92,13 @@
             background: url('https://astrangeman.bliesports.com.tr/fydell.jpg') no-repeat center center;
             background-size: cover;
             z-index: 0;
-            filter: brightness(0.35);
+            filter: brightness(0.6); /* Arka plandaki yazının görünmesi için parlaklığı biraz artırdım */
         }
 
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, transparent 60%, #020a06 100%);
+            background: linear-gradient(to bottom, transparent 50%, #020a06 100%);
             z-index: 1;
         }
 
@@ -106,35 +106,30 @@
             position: relative;
             z-index: 2;
             text-align: center;
+            margin-top: 150px; /* Yazıyı görseldeki başlığın altına çekmek için */
             animation: fadeIn 1.5s ease-out;
-        }
-
-        .hero-content h1 {
-            font-family: 'Creepster', cursive;
-            font-size: 7rem;
-            color: #ffffff;
-            text-shadow: 0 0 40px rgba(46, 204, 46, 0.6);
-            margin-bottom: 5px;
         }
 
         .hero-content p {
             font-size: 1.2rem;
             color: #88a895;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            font-weight: 300;
+            text-shadow: 0 0 20px rgba(0,0,0,1);
         }
 
         /* Aşağı Kaydır İkonu */
         .scroll-hint {
             position: absolute;
-            bottom: 30px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 3;
             color: #2ecc2e;
             text-align: center;
             animation: bounce 2s infinite;
+            text-decoration: none;
         }
 
         @keyframes bounce {
@@ -143,7 +138,7 @@
             60% {transform: translateY(-5px) translateX(-50%);}
         }
 
-        /* Oyun Dosyası Bölümü (Aşağıdaki Kısım) */
+        /* İçerik Bölümü */
         .content-section {
             padding: 100px 5%;
             max-width: 1000px;
@@ -182,12 +177,11 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 3.5rem; }
             .info-card { padding: 30px; }
         }
     </style>
@@ -205,13 +199,13 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1>A STRANGE MAN</h1>
-        <p>Karanlık seni bekliyor.</p>
+        <!-- HTML Başlığı Silindi, Sadece Alt Metin Kaldı -->
+        <p>KARANLIK SENİ BEKLİYOR</p>
     </div>
-    <div class="scroll-hint">
+    <a href="#dosya" class="scroll-hint">
         <p style="font-family: 'Orbitron'; font-size: 0.7rem; margin-bottom: 5px;">OYUN DOSYASI</p>
         <i class="fa-solid fa-chevron-down"></i>
-    </div>
+    </a>
 </section>
 
 <section class="content-section" id="dosya">
